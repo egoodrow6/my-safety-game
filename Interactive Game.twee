@@ -1,6 +1,5 @@
 :: StoryTitle
-Interactive Game
-
+Interactive Game (Enhanced for Parent Safety Training)
 
 :: StoryData
 {
@@ -11,126 +10,195 @@ Interactive Game
   "zoom": 0.6
 }
 
+/* --- GLOBAL VISUAL + ART THEME + UI UPGRADES --- */
+/* THEME: "Cyber-Safe Cartoon" — warm pastel colors + subtle neon accents.
+   STYLE SUGGESTION:
+.tw-passage {
+  background: url('IMAGE_URL_background_cartoon_cybersafety') center/cover no-repeat;
+  color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  font-family: 'Nunito', sans-serif;
+}
+
+.tw-link {
+  padding: 0.4rem 0.8rem;
+  background: #ffe88a;
+  color: #000;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.tw-link:hover {
+  background: #ffdd55;
+}
+
+AUDIO PLACEHOLDERS:
+<<audio "click" "AUDIO_URL_click_soft.mp3">>
+<<audio "ambient" "AUDIO_URL_soft_ambient.mp3">>
+
+MICRO-ANIMATION SUGGESTIONS:
+/* use simple CSS animations when exported */
+.glow {
+  animation: glowPulse 2s infinite;
+}
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 5px #fff; }
+  50% { box-shadow: 0 0 15px #ffd966; }
+  100% { box-shadow: 0 0 5px #fff; }
+}
+
+/* STATS SYSTEM (NEW) */
+<<set $trust to 50>>        /* how much you trust your child */
+<<set $safety to 50>>       /* how safe their online environment is */
+<<set $independence to 50>> /* child autonomy */
+
+/* Display stats UI in corner in any passage by adding:  
+   <<include "StatsHUD">> 
+*/
+
+:: StatsHUD
+/%% VISUAL: small stat bar card %%/
+Trust: $trust
+Safety: $safety
+Independence: $independence
+
 
 :: 11-13 {"position":"775,425","size":"100,100"}
-96% of US teens say they use the internet every day which has doubled since 2015
+/%% VISUAL: Teen using phone in bedroom %%/
+96% of US teens say they use the internet every day — double since 2015.
 
-[[Your kid asks for a phone because everyone in their class has one.]][[next]]
-
+[[Your kid asks for a phone because everyone in their class has one.]]
+[[next]]
 
 
 :: 14-17 {"position":"475,400","size":"100,100"}
-31% said their children have been contacted by a stranger on their mobile device. Nearly one-third (28%) said the stranger referenced their child's location
+/%% VISUAL: Teen scrolling through social media notifications %%/
+31% of parents say their child has been contacted by a stranger on their device; 28% say the stranger referenced their child's location.
 
 [[Your kid asks for a phone because everyone in their class has one.]]
 
 
 :: 8-10 {"position":"650,425","size":"100,100"}
-47% of kids in the US aged 8-10 with access to internet or phone
+/%% VISUAL: Younger kid holding tablet on couch %%/
+47% of kids aged 8–10 in the U.S. have access to a phone or internet device.
 
 [[Your kid asks for a phone because everyone in their class has one.]]
 
 
 :: Give them an phone {"position":"450,725","size":"100,100"}
-75% of children receive a phone by age 12
+/%% VISUAL: Parent handing child a smartphone %%/
+75% of children receive a phone by age 12.
 
 [[What limits do you set?]]
 
 
 :: I trust my child to make good choices {"position":"325,975","size":"100,100"}
-TODO: % of parents unaware of child’s online interactions
+/%% VISUAL: Parent shrugging, child smiling with phone %%/
+TODO: % of parents unaware of child’s online interactions.
 
 [[Now, your kid wants to download an app]]
 
 
 :: I'm going to limit their screen time {"position":"450,975","size":"100,100"}
-
-TODO: % of predators contact kids via gaming or DMs rather than time-based
+/%% VISUAL: Screen time timer icon %%/
+TODO: % of predators contact kids via gaming or DMs rather than time-based limits.
 
 [[Now, your kid wants to download an app]]
 
 
 :: I'm going to monitor all their messages {"position":"575,975","size":"100,100"}
-
-TODO: % of grooming cases discovered through parental checks
+/%% VISUAL: Parent reviewing messages on phone (placeholder) %%/
+TODO: % of grooming cases discovered through parental checks.
 
 [[Now, your kid wants to download an app]]
 
 
 :: Instagram/TikTok {"position":"575,1225","size":"100,100"}
-% of exploitation reports from Instagram
+/%% VISUAL: TikTok + IG logos glowing on phone screen %%/
+TODO: % of exploitation reports from Instagram.
+
+[[End]]
 
 
 :: Now, your kid wants to download an app {"position":"450,1100","size":"100,100"}
-Which social media/app can they download? 
+Which social media/app can they download?
 
 [[Snapchat]]
-
 [[Instagram/TikTok]]
-
 [[Roblox/Discord/Gaming App]]
 
 
-
-
 :: Roblox/Discord/Gaming App {"position":"450,1225","size":"100,100"}
-Many children are gaming with strangers online. For example, one Pew Research Study found 59% of boys play with online-only friends a quarter of young people report being sexually solicited on the internet in return for something of value before turning 18, including on gaming platforms,
+/%% VISUAL: Gaming headset + Discord icons %%/
+Many children game with strangers online.
 
+One study found 59% of boys play with online-only friends.
+A quarter of young people experience sexual solicitation online before age 18 — including on gaming platforms.
+
+[[End]]
 
 
 :: Say no {"position":"750,725","size":"100,100"}
-3 in 10 parents wish they had delayed giving their child a smartphone, citing staying up to late (43%), exposure to mature content (41%) and losing interest in physical hobbies (39%) as reasons.
+/%% VISUAL: Parent shaking head, phone behind back %%/
+3 in 10 parents regret giving their child a phone too early.
+Reasons include staying up too late (43%), exposure to mature content (41%), and losing interest in hobbies (39%).
 
-However, child uses friend’s phone unsupervised
+However… the child uses a friend's phone unsupervised.
 
-TODO: Stat: % of risky online contact through borrowed devices
+TODO: % of risky online contact through borrowed devices.
+
+[[End]]
 
 
 :: Snapchat {"position":"300,1225","size":"100,100"}
-TODO: % of trafficking cases linked to Snapchat
+/%% VISUAL: Snapchat ghost icon with warning triangle %%/
+TODO: % of trafficking cases linked to Snapchat.
+
+[[End]]
 
 
 :: Tech Supervision {"position":"175,725","size":"100,100"}
+/%% VISUAL: Parent dashboard / parental control app graphic %%/
+TODO: Connect this path with supervision strategies.
 
+[[End]]
 
 
 :: Untitled Passage {"position":"650,75","size":"100,100"}
-Are you a parent? 
+/%% VISUAL: Game title card with friendly icons %%/
+Are you a parent?
 
 [[Yes, a parent]]
 
 
-
-
 :: What limits do you set? {"position":"450,850","size":"100,100"}
+/%% VISUAL: Settings panel / toggle switches %%/
 
 [[I'm going to limit their screen time]]
-
 [[I'm going to monitor all their messages]]
-
 [[I trust my child to make good choices]]
 
 
 :: Yes, a parent {"position":"650,225","size":"100,100"}
-How old is your kid? 
+/%% VISUAL: Three silhouettes representing age groups %%/
+How old is your kid?
 
 [[8-10]]
-
 [[11-13]]
-
 [[14-17]]
 
 
-
-
 :: Your kid asks for a phone because everyone in their class has one. {"position":"625,600","size":"100,100"}
-What do you do? 
+/%% VISUAL: Child begging for a phone at kitchen table %%/
+What do you do?
 
 [[Give them an phone]]
-
 [[Say no]]
 
 
-
 :: next {"position":"775,550","size":"100,100"}
+/%% VISUAL: Small arrow button / continue icon %%/
+Continue your journey.
 
+[[Yes, a parent]]
